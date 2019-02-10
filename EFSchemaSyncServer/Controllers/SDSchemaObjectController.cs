@@ -43,7 +43,7 @@ namespace EFSchemaSyncServer.Controllers
 
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("schema", schemaObject);
+            return CreatedAtAction("GetDbSchema", schemaObject);
         }
 
         // POST: api/SDSchemaObject
@@ -61,10 +61,17 @@ namespace EFSchemaSyncServer.Controllers
                 var table = new SDDataTable { Id = id };
                 var column = new SDColumn { Id = id };
 
-                _context.SDDataTables.Attach(table);
-                _context.SDDataTables.Remove(table);
-                _context.SDColumns.Attach(column);
-                _context.SDColumns.Remove(column);
+                var tab = _context.SDDataTables.Include(t => t.Columns).SingleOrDefault(t => t.Id == id);
+                var col = _context.SDColumns.SingleOrDefault(t => t.Id == id);
+
+                if (tab != null)
+                {
+                    _context.SDDataTables.Remove(tab);
+                }
+                if (col != null)
+                {
+                    _context.SDColumns.Remove(col);
+                }
             }
             _context.SaveChanges();
 
