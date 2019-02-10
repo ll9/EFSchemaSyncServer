@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFSchemaSyncServer", "EFSchemaSyncServer\EFSchemaSyncServer.csproj", "{3491C833-390C-4550-B9A5-14C8901C309D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3491C833-390C-4550-B9A5-14C8901C309D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3491C833-390C-4550-B9A5-14C8901C309D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3491C833-390C-4550-B9A5-14C8901C309D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3491C833-390C-4550-B9A5-14C8901C309D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC9EBE63-55D5-4378-B03D-E3AE04618093}
+	EndGlobalSection
+EndGlobal
